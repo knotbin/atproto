@@ -1,8 +1,8 @@
 name: build-and-push-ozone-ghcr
 on:
   push:
-    branches:
-      - main
+   # branches:
+     # - main
 env:
   REGISTRY: ghcr.io
   USERNAME: ${{ github.actor }}
@@ -13,7 +13,7 @@ env:
 
 jobs:
   ozone-container-ghcr:
-    if: github.repository == 'bluesky-social/atproto'
+#    if: github.repository == 'bluesky-social/atproto'
     runs-on: ubuntu-22.04
     permissions:
       contents: read
